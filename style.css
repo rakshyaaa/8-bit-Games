@@ -32,9 +32,10 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: sticky;
+    position: absolute;
+    width: 100vw;
     color: #ffffff;
-    height: 80px;
+    height: 70px;
 }
 
 #logo {
