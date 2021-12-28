@@ -21,9 +21,9 @@
         <img class="carouselImage" src="images/slide3.png" />
 
         <div id="carouselDots">
-          <span class="carouselDot" onclick="carouselSlide(0)"></span>
-          <span class="carouselDot" onclick="carouselSlide(1)"></span>
-          <span class="carouselDot" onclick="carouselSlide(2)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(0)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(1)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(2)"></span>
         </div>
       </div>
       <div id="gameInfo">
@@ -118,22 +118,70 @@
 
     <div id="testimonials">
       <h1>Loved by everyone</h1>
-      <div id="testimonialCard">
-        <img id="testimonialCardImage" src="images/person.jpg" />
-        <p>Jake Peralta</p>
-        <p>Retro Games is the best.</p>
-        <div id="rating">
-          <img class="ratingImage" src="images/star.png" />
-          <img class="ratingImage" src="images/star.png" />
-          <img class="ratingImage" src="images/star.png" />
-          <img class="ratingImage" src="images/star.png" />
-          <img class="ratingImage" src="images/star.png" />
+
+      <div class="testimonialCarousel">
+        <div id="testimonialCard">
+          <img id="testimonialCardImage" src="images/person.jpg" />
+          <p>Jake Peralta</p>
+          <p>Retro Games is the best.</p>
+          <div id="rating">
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
+            reiciendis earum, molestias, magni voluptatibus dolores aperiam
+            doloribus
+          </p>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
-          reiciendis earum, molestias, magni voluptatibus dolores aperiam
-          doloribus
-        </p>
+      </div>
+
+      <div class="testimonialCarousel">
+        <div id="testimonialCard">
+          <img id="testimonialCardImage" src="images/person.jpg" />
+          <p>Jake Peralta</p>
+          <p>Could have been better</p>
+          <div id="rating">
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
+            reiciendis earum, molestias, magni voluptatibus dolores aperiam
+            doloribus
+          </p>
+        </div>
+      </div>
+
+      <div class="testimonialCarousel">
+        <div id="testimonialCard">
+          <img id="testimonialCardImage" src="images/person.jpg" />
+          <p>Jake Peralta</p>
+          <p>Just Amazing.</p>
+          <div id="rating">
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid
+            reiciendis earum, molestias, magni voluptatibus dolores aperiam
+            doloribus
+          </p>
+        </div>
+      </div>
+
+      <div id="testimonialCarouselDots">
+        <span class="testimoniaCarouselDot"></span>
+        <span class="testimoniaCarouselDot"></span>
+        <span class="testimoniaCarouselDot"></span>
       </div>
     </div>
 

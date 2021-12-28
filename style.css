@@ -177,6 +177,10 @@ a:visited {
   gap: 30px;
 }
 
+.testimonialCarousel {
+  display: none;
+}
+
 #testimonialCard {
   display: flex;
   flex-direction: column;
@@ -194,6 +198,22 @@ a:visited {
   height: auto;
   width: 80px;
   border-radius: 50%;
+}
+
+#testimonialCarouselDots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimoniaCarouselDot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #f2f6ff;
+  text-align: center;
 }
 
 #newsletter {
