@@ -17,8 +17,14 @@
     <div id="carousel">
         <div id="carouselImages">
             <img class="carouselImage" src="images/slide1.png">
-            <!-- <img class = "carouselImage" src = "">
-                <img class = "carouselImage" src = ""> -->
+            <img class="carouselImage carouselImageOther" src="images/slide2.png">
+            <img class="carouselImage carouselImageOther" src="images/slide3.png">
+
+            <div id = "carouselDots">
+                <span class = "carouselDot" onclick="carouselSlide(0)"></span>
+                <span class = "carouselDot" onclick="carouselSlide(1)"></span>
+                <span class = "carouselDot" onclick="carouselSlide(2)"></span>
+            </div>
         </div>
         <div id="gameInfo">
             <h1>
@@ -26,6 +32,7 @@
             </h1>
             <p> Play a number of Nintendo 64 classic games.</p>
         </div>
+        
     </div>
 
     <header>
@@ -51,7 +58,7 @@
         </div>
         <div id="categories">
             <ul id="categoriesList">
-                <li class="categoriesItem">All Games</li>
+                <li class=" gameCategoryItemActive categoriesItem ">All Games</li>
                 <li class="categoriesItem">Action</li>
                 <li class="categoriesItem">Adventure</li>
                 <li class="categoriesItem">Arcade</li>
@@ -99,14 +106,15 @@
     </div>
 
     <div id="about">
+        <div id = "aboutContent">
+            <h1>About 8-bit Games</h1>
+            <p>8-Bit games provides free retro games on-site for everyone to play.
+                Bringing back nostalgic memories of NES classic games online.
+            </p>
+        </div>
         <div id = "marioFlying">
             <img id = "mario" src = "images/Mario.png">
-        </div>
-        <h1>About 8-bit Games</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Eveniet dolore dicta veritatis maxime inventore ullam amet
-            eaque quidem esse, ea veniam pariatur, enim saepe.
-            Molestias ad ipsa nulla laudantium? Quos.</p>
+        </div> 
     </div>
 
     <div id="testimonials">
@@ -162,7 +170,7 @@
             <p>Developed by: Rakshya</p>
         </div>
     </div>
-
+    <script src = "script.js"></script>
 </body>
 
 </html>
