@@ -1,4 +1,5 @@
 
+console.log("fix");
 function carouselSlide(n) {
 
     let slides = document.getElementsByClassName("carouselImage");
