@@ -31,7 +31,7 @@ header {
 }
 
 .carouselImage {
-  display: none;
+  display: block;
 }
 
 img {
