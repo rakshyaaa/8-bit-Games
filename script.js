@@ -1,7 +1,27 @@
-// function display a corresponding image on click the carousel button
+function onGameCategoryItemClick(n, gametype) {
+  let gt = gametype;
+  let gameItems = document.getElementsByClassName("gameItem");
 
-// onCarouselDotClick
-// handleCarouselClick
+  for (let i = 0; i < gameItems.length; i++) {
+    let gameItemType = gameItems[i].getAttribute("data-game-type");
+
+    if (gameItemType === gt) {
+      gameItems[i].style.display = "block";
+    } else {
+      gameItems[i].style.display = "none";
+      // document.getElementById("gameComingSoon").style.display = "block";
+    }
+  }
+
+  let categoryItems = document.getElementsByClassName("categoriesItem");
+  for (let i = 0; i < categoryItems.length; i++) {
+    categoryItems[i].style.backgroundColor = "#f2f6ff";
+    categoryItems[i].style.color = "black";
+  }
+  categoryItems[n].style.backgroundColor = "#3366cc";
+  categoryItems[n].style.color = "#ffffff";
+}
+
 function onCarouselDotClick(n) {
   let slides = document.getElementsByClassName("carouselImage");
   let dots = document.getElementsByClassName("carouselDot");
@@ -39,6 +59,8 @@ function imageTransitionSlides() {
   }
   slides[imageSlideIndex - 1].style.display = "block";
   dots[imageSlideIndex - 1].style.backgroundColor = "blue";
+
+  setTimeout(imageTransitionSlides, 2000);
 }
 
 function testimonialTransitionSlides() {
@@ -50,7 +72,7 @@ function testimonialTransitionSlides() {
   }
 
   for (let i = 0; i < dots.length; i++) {
-    dots[i].style.backgroundColor = "white";
+    dots[i].style.backgroundColor = "#f2f6ff";
   }
 
   testimonialSlideIndex++;
@@ -59,7 +81,11 @@ function testimonialTransitionSlides() {
   }
   slides[testimonialSlideIndex - 1].style.display = "block";
   dots[testimonialSlideIndex - 1].style.backgroundColor = "blue";
+  setTimeout(testimonialTransitionSlides, 2000);
 }
 
-setInterval(imageTransitionSlides, 2000);
-setInterval(testimonialTransitionSlides, 2000);
+imageTransitionSlides();
+testimonialTransitionSlides();
+
+//setInterval(imageTransitionSlides, 2000);
+// setInterval(testimonialTransitionSlides, 2000);

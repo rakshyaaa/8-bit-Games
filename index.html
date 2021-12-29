@@ -14,6 +14,24 @@
   </head>
 
   <body>
+    <header>
+      <div id="navbar">
+        <div id="logo">
+          <a href="/"><img id="logo" src="images/8bit-logo.png" /></a>
+        </div>
+
+        <div id="navItems">
+          <ul id="navBarList">
+            <a href="#games" class="navlink"><li class="navItem">Games</li></a>
+            <a href="#about" class="navlink"><li class="navItem">About</li></a>
+            <a href="#newsletter" class="navlink"
+              ><li class="navItem">Updates</li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </header>
+
     <div id="carousel">
       <div id="carouselImages">
         <img class="carouselImage" src="images/slide1.png" />
@@ -32,74 +50,94 @@
       </div>
     </div>
 
-    <header>
-      <div id="navbar">
-        <div id="logo">
-          <img id="logo" src="images/8bit-logo.png" />
-        </div>
-
-        <div id="navItems">
-          <ul id="navBarList">
-            <a href="#games" class="navlink"><li class="navItem">Games</li></a>
-            <a href="#about" class="navlink"><li class="navItem">About</li></a>
-            <a href="#newsletter" class="navlink"
-              ><li class="navItem">Updates</li></a
-            >
-          </ul>
-        </div>
-      </div>
-    </header>
-
     <div id="games">
       <div id="gameText">
         <h1>All the retro games in one place</h1>
       </div>
       <div id="categories">
         <ul id="categoriesList">
-          <li class="gameCategoryItemActive categoriesItem">All Games</li>
-          <li class="categoriesItem">Action</li>
-          <li class="categoriesItem">Adventure</li>
-          <li class="categoriesItem">Arcade</li>
-          <li class="categoriesItem">Sports</li>
-          <li class="categoriesItem">Strategy</li>
+          <li
+            class="gameCategoryItemActive categoriesItem"
+            onclick="onGameCategoryItemClick(0, 'allgames')"
+          >
+            All Games
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(1, 'action')"
+          >
+            Action
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(2, 'adventure')"
+          >
+            Adventure
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(3, 'arcade')"
+          >
+            Arcade
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(4, 'sports')"
+          >
+            Sports
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(5, 'strategy')"
+          >
+            Strategy
+          </li>
         </ul>
       </div>
 
-      <div id="gameItems">
-        <div class="gameItem">
-          <img src="images/supermariobros.png" />
+      <div class="gameItems">
+        <div class="gameItem" data-game-type="allgames">
+          <img class="gameItemImage" src="images/supermariobros.png" />
+          <!-- <p class = "playText">Play</p> -->
           <p>Super Mario Bros</p>
         </div>
 
-        <div class="gameItem">
-          <img src="images/excitebike.png" />
+        <div class="gameItem" data-game-type="allgames">
+          <img class="gameItemImage" src="images/excitebike.png" />
           <p>Excite Bike</p>
         </div>
 
-        <div class="gameItem">
-          <img src="images/pacman.png" />
+        <div class="gameItem" data-game-type="allgames">
+          <img class="gameItemImage" src="images/pacman.png" />
           <p>Pacman</p>
         </div>
 
-        <div class="gameItem">
-          <img src="images/castlevania.png" />
+        <div class="gameItem" data-game-type="action">
+          <img class="gameItemImage" src="images/castlevania.png" />
           <p>Castlevania</p>
         </div>
 
-        <div class="gameItem">
-          <img src="images/duckhunt.png" />
+        <div class="gameItem" data-game-type="strategy">
+          <img class="gameItemImage" src="images/duckhunt.png" />
           <p>Duck Hunt</p>
         </div>
 
-        <div class="gameItem">
-          <img src="images/lengendofzelda.png" />
+        <div class="gameItem" data-game-type="adventure">
+          <img class="gameItemImage" src="images/lengendofzelda.png" />
           <p>The Legend of Zelda</p>
         </div>
 
-        <div class="gameItem">
-          <img src="images/megaman.png" />
+        <div class="gameItem" data-game-type="adventure">
+          <img class="gameItemImage" src="images/megaman.png" />
           <p>Mega Man</p>
         </div>
+        <div class="gameItem" data-game-type="action">
+          <img class="gameItemImage" src="images/megaman.png" />
+          <p>Mega Man</p>
+        </div>
+        <!-- <div id = "gameComingSoon"> 
+          <p id= "gameComingSoonText"> Coming Soon!</p>
+        </div> -->
       </div>
     </div>
 
@@ -112,6 +150,7 @@
         </p>
       </div>
       <div id="marioFlying">
+        <!-- <p>MARIO IMAGE</p> -->
         <img id="mario" src="images/mario.png" />
       </div>
     </div>
