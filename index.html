@@ -97,48 +97,110 @@
 
       <div class="gameItems">
         <div class="gameItem" data-game-type="allgames">
-          <img class="gameItemImage" src="images/supermariobros.png" />
-          <!-- <p class = "playText">Play</p> -->
+          <img
+            class="gameItemImage"
+            src="images/supermariobros.png"
+            onclick="onGameItemImageClick(this.src,'Action','Super Mario Bros')"
+          />
+          <p class="playText">Play</p>
           <p>Super Mario Bros</p>
         </div>
 
         <div class="gameItem" data-game-type="allgames">
-          <img class="gameItemImage" src="images/excitebike.png" />
+          <img class="gameItemImage" src="images/excitebike.png" onclick="onGameItemImageClick(this.src,'Action','Excite Bike')"/>
+          <p class="playText">Play</p>
           <p>Excite Bike</p>
         </div>
 
         <div class="gameItem" data-game-type="allgames">
-          <img class="gameItemImage" src="images/pacman.png" />
+          <img class="gameItemImage" src="images/pacman.png" onclick="onGameItemImageClick(this.src,'Action','Pacman')" />
+          <p class="playText">Play</p>
           <p>Pacman</p>
         </div>
 
         <div class="gameItem" data-game-type="action">
-          <img class="gameItemImage" src="images/castlevania.png" />
+          <img class="gameItemImage" src="images/castlevania.png" onclick="onGameItemImageClick(this.src,'Action','Castlevania')" />
+          <p class="playText">Play</p>
           <p>Castlevania</p>
         </div>
 
         <div class="gameItem" data-game-type="strategy">
-          <img class="gameItemImage" src="images/duckhunt.png" />
+          <img class="gameItemImage" src="images/duckhunt.png" onclick="onGameItemImageClick(this.src,'Action, Strategy','Castlevania')"/>
+          <p class="playText">Play</p>
           <p>Duck Hunt</p>
         </div>
 
         <div class="gameItem" data-game-type="adventure">
-          <img class="gameItemImage" src="images/lengendofzelda.png" />
+          <img class="gameItemImage" src="images/lengendofzelda.png" onclick="onGameItemImageClick(this.src,'Action, Adventure','The Legend of Zelda')"/>
+          <p class="playText">Play</p>
           <p>The Legend of Zelda</p>
         </div>
 
         <div class="gameItem" data-game-type="adventure">
-          <img class="gameItemImage" src="images/megaman.png" />
+          <img class="gameItemImage" src="images/megaman.png" onclick="onGameItemImageClick(this.src,'Action, Adventure','Mega Man')"/>
+          <p class="playText">Play</p>
           <p>Mega Man</p>
         </div>
         <div class="gameItem" data-game-type="action">
-          <img class="gameItemImage" src="images/megaman.png" />
+          <img class="gameItemImage" src="images/megaman.png" onclick="onGameItemImageClick(this.src,'Action','Mega Man')" />
+          <p class="playText">Play</p>
           <p>Mega Man</p>
         </div>
         <!-- <div id = "gameComingSoon"> 
           <p id= "gameComingSoonText"> Coming Soon!</p>
         </div> -->
       </div>
+    </div>
+
+    <div id="gameOverlay">
+      <div id="gamePopUp">
+        <div id="gamePopUpImage">
+          <img id = "gamePopUpImageSource" src = "images/supermariobros.png">
+        </div>
+        <div id="gamePopUpContent">
+          <div id="gamePopUpTitle">
+            <h1 id = "gamePopUpName">Super Mario Bros</h1>
+            <p id = "gamePopUpType" class = "gamePopUpType">Action, Adventure</p>
+          </div>
+          
+          <div id = "gamePopUpInformation">
+            <div class = "gameInformationAttribute">
+              <p class = "gameInformationAttributeKey">
+                NES release date:
+              </p>
+              <p class = "gameInformationAttributeValue">
+                October 1985
+              </p>
+            </div>
+            <div class = "gameInformationAttribute">
+              <p class = "gameInformationAttributeKey">
+                Developer:
+              </p>
+              <p class = "gameInformationAttributeValue">
+                Nintendo
+              </p>
+            </div>
+            <div class = "gameInformationAttribute">
+              <p class = "gameInformationAttributeKey">
+                Number of playes:
+              </p>
+              <p class = "gameInformationAttributeValue">
+                2
+              </p>
+            </div>
+           </div>
+
+           <div id = "playGame">
+            <a class = "playGameButton">Play Game</a>
+           </div>
+        </div>
+        <div id = "cancelOverlay">
+          <img id = "cancelOverlayImage" src = "images/canceloverlay.png" onclick="onGameOverlayClick()">
+        </div>
+      </div>
+
+      </div>
+      
     </div>
 
     <div id="about">
@@ -225,21 +287,33 @@
     </div>
 
     <div id="newsletter">
-      <h1>Subscribe to our newsletter</h1>
-      <p>and receive updates on new game uploads.</p>
-      <form id="newsletterForm">
-        <div class="input-icons">
-          <img class="iconInput" src="images/personicon.png" />
-          <input type="text" class="input" placeholder="Full Name" />
-        </div>
+      <div id = "newsletterBlock">
+        <h1>Subscribe to our newsletter</h1>
+        <p>and receive updates on new game uploads.</p>
+        <div id = "newsletterBlockInside">
+          <form id="newsletterForm">
+            <div class="input-icons">
+              <img class="iconInput" src="images/personicon.png" />
+              <input type="text" class="input" placeholder="Full Name" />
+            </div>
 
-        <div class="input-icons">
-          <img class="iconInput" src="images/email.svg" />
-          <input type="email" class="input" placeholder="Email" />
-        </div>
+            <div class="input-icons">
+              <img class="iconInput" src="images/email.svg" />
+              <input type="email" class="input" placeholder="Email" />
+            </div>
 
-        <a class="button" href=""> Subscribe </a>
-      </form>
+            <a class="buttonNewsletterSubscribe" onclick="onButtonNewsletterSubscribeClick()"> Subscribe </a>
+          </form>
+        </div>
+        <div id = "thankyouBlock">
+          <div id = "thankyouBlockInside">
+            <img  id = "exportImage" src = "images/export.png">
+            <p>Thank you.</p>
+            <p>You are now subscribed to our newsletter.</p>
+          </div>
+          
+        </div>
+      </div>
     </div>
 
     <div id="footer">
@@ -254,6 +328,7 @@
         <p>Developed by: Rakshya</p>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

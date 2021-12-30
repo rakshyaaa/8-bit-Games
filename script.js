@@ -1,3 +1,9 @@
+let imageSlideIndex = 0;
+let testimonialSlideIndex = 0;
+
+imageTransitionSlides();
+testimonialTransitionSlides();
+
 function onGameCategoryItemClick(n, gametype) {
   let gt = gametype;
   let gameItems = document.getElementsByClassName("gameItem");
@@ -37,9 +43,6 @@ function onCarouselDotClick(n) {
   slides[n].style.display = "block";
   dots[n].style.backgroundColor = "blue";
 }
-
-let imageSlideIndex = 0;
-let testimonialSlideIndex = 0;
 
 function imageTransitionSlides() {
   let slides = document.getElementsByClassName("carouselImage");
@@ -84,8 +87,28 @@ function testimonialTransitionSlides() {
   setTimeout(testimonialTransitionSlides, 2000);
 }
 
-imageTransitionSlides();
-testimonialTransitionSlides();
+function onGameItemImageClick(imageSource, gameType, gameName) {
+  document
+    .getElementById("gamePopUpImageSource")
+    .setAttribute("src", imageSource);
+  document.getElementById("gamePopUpName").innerHTML = gameName;
+  document.getElementById("gamePopUpType").innerHTML = gameType;
+  document.getElementById("gameOverlay").style.display = "block";
+}
 
-//setInterval(imageTransitionSlides, 2000);
-// setInterval(testimonialTransitionSlides, 2000);
+function onGameOverlayClick() {
+  document.getElementById("gameOverlay").style.display = "none";
+}
+
+window.addEventListener("click", (e) => {
+  console.log(e.target);
+  // console.log("clicked");
+  if (e.target === gameOverlay) {
+    document.getElementById("gameOverlay").style.display = "none";
+  }
+});
+
+function onButtonNewsletterSubscribeClick() {
+  document.getElementById("newsletterBlockInside").style.display = "none";
+  document.getElementById("thankyouBlock").style.display = "block";
+}
