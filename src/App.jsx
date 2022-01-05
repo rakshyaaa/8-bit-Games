@@ -5,6 +5,8 @@ import ImageCarousel from "./ImageCarousuel";
 import Navbar from "./Navbar";
 import Game from "./Game";
 import About from "./About";
+import Testimonial from "./Testimonial";
+import Footer from "./Footer";
 import {
   logoImage,
   navItems,
@@ -14,6 +16,8 @@ import {
   gameCategories,
   games,
   about,
+  testimonial,
+  footer,
 } from "./Data";
 
 function App() {
@@ -24,6 +28,8 @@ function App() {
         images={carouselImages}
         title={carouselText.title}
         subtitle={carouselText.subTitle}
+        delay={5000}
+        defaultValue={2}
       />
       <Game
         gameSectionText={gameSectionText}
@@ -31,6 +37,8 @@ function App() {
         games={games}
       />
       <About about={about} />
+      <Testimonial testimonial={testimonial} />
+      <Footer footer={footer} />
     </div>
   );
 }
