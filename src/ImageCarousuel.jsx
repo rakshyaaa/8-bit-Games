@@ -1,7 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function ImageCarousel({ images, title, subTitle }) {
-  const [selectedImg, setSelectedImg] = useState(0);
+export default function ImageCarousel({
+  images,
+  title,
+  subTitle,
+  defaultValue = 0,
+  delay = 3000,
+}) {
+  const [selectedImg, setSelectedImg] = useState(defaultValue);
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      setSelectedImg((selectedImg) => (selectedImg + 1) % images.length);
+    }, delay);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
 
   return (
     <div className="carousel">

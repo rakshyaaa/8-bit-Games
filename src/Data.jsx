@@ -10,6 +10,11 @@ import pacman from "./images/pacman.png";
 import excitebike from "./images/excitebike.png";
 import megaman from "./images/megaman.png";
 import mario from "./images/mario.png";
+import facebook from "./images/facebook.png";
+import instagram from "./images/instagram.png";
+import twitter from "./images/twitter.png";
+
+import person from "./images/person.jpg";
 
 /*----------------- NavBar data ------------------------*/
 
@@ -110,3 +115,64 @@ export const about = {
 };
 
 /*--------------------------testimonial ------------------*/
+
+export const testimonial = {
+  title: "Loved by everyone",
+  testimonials: [
+    {
+      image: {
+        src: person,
+        alt: "Johan Smith",
+      },
+      name: "Johan Smith",
+      rating: 4,
+      description: "Retro Games is the best!",
+      subDescription:
+        "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
+    },
+    {
+      image: {
+        src: person,
+        alt: "Karen Brown",
+      },
+      name: "Karen Brown",
+      rating: 3,
+      description: "Could be better.",
+      subDescription:
+        "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
+    },
+    {
+      image: {
+        src: person,
+        alt: "Rudolf Kilnman",
+      },
+      name: "Rudolf Kilnman",
+      rating: 5,
+      description: "One word. Amazing.",
+      subDescription:
+        "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
+    },
+  ],
+};
+
+/* ------------------------ Footer ---------------------------*/
+
+export const footer = {
+  socials: [
+    {
+      alt: "facebook",
+      src: facebook,
+    },
+    {
+      alt: "instagram",
+      src: instagram,
+    },
+    ,
+    {
+      alt: "twitter",
+      src: twitter,
+    },
+  ],
+
+  developer: "Rakshya",
+};

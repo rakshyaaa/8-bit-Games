@@ -177,3 +177,67 @@ body {
   top: -12em;
   right: 3em;
 }
+
+/*--------------------------------testimonials-------------------*/
+.testimonials {
+  background-color: #ffffff;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+
+.testimonialCardInside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.testimonialCardImage {
+  height: auto;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.reviewer {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
+.review {
+  color: #666666;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.subreview {
+  color: #666666;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.ratingImage {
+  height: 32.43px;
+  width: 32px;
+}
+
+.testimonialCarouselDots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimonialCarouselDot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #f2f6ff;
+  text-align: center;
+}
+
+/*-------------------------Footer --------------------------------*/
