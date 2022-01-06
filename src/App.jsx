@@ -45,7 +45,7 @@ function App() {
         title={testimonial.title}
         testimonials={testimonial.testimonials}
       />
-      <Footer items={footer.items} description={footer.description} />
+      <Footer items={footer.items} description={footer.descriptionDetail} />
     </div>
   );
 }

@@ -174,5 +174,5 @@ export const footer = {
     },
   ],
 
-  description: "Developed by: jellybean",
+  descriptionDetail: "Developed by: jellybean",
 };
