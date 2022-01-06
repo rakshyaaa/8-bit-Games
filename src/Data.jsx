@@ -13,7 +13,7 @@ import mario from "./images/mario.png";
 import facebook from "./images/facebook.png";
 import instagram from "./images/instagram.png";
 import twitter from "./images/twitter.png";
-
+import closeicon from "./images/canceloverlay.png";
 import person from "./images/person.jpg";
 
 /*----------------- NavBar data ------------------------*/
@@ -67,38 +67,80 @@ export const gameCategories = [
 export const games = [
   {
     title: "Super Mario Bros",
-    src: supermario,
-    alt: "Super Mario Bros",
+    image: {
+      src: supermario,
+      alt: "Super Mario Bros",
+    },
+    category: ["All Games", "Action", "Adventure", "Strategy"],
+    releaseDate: "January 1985",
+    developer: "Nintendo",
+    numOfPlayers: 2,
   },
   {
     title: "Excite Bike",
-    src: excitebike,
-    alt: "Excite Bike",
+    image: {
+      src: excitebike,
+      alt: "Excite Bike",
+    },
+    category: ["All Games", "Adventure", "Sports", "Strategy"],
+    releaseDate: "Feburary 2001",
+    developer: "Nintendo",
+    numOfPlayers: 1,
   },
   {
     title: "Pacman",
-    src: pacman,
-    alt: "Pacman",
+    image: {
+      src: pacman,
+      alt: "Pacman",
+    },
+    category: ["All Games", "Action"],
+    releaseDate: "March 1985",
+    developer: "Nintendo",
+    numOfPlayers: 1,
   },
   {
     title: "Castlevania",
-    src: castlevania,
-    alt: "Castlevania",
+    image: {
+      src: castlevania,
+      alt: "Castlevania",
+    },
+    category: ["All Games", "Action", "Strategy"],
+    releaseDate: "March 1985",
+    developer: "Nintendo",
+    numOfPlayers: 2,
   },
   {
     title: "Duck Hunt",
-    src: duckhunt,
-    alt: "Duck Hunt",
+    image: {
+      src: duckhunt,
+      alt: "Duck Hunt",
+    },
+    category: ["All Games", "Sports", "Strategy"],
+    releaseDate: "April 1985",
+    developer: "Nintendo",
+    numOfPlayers: 2,
   },
   {
     title: "The Legend of Zelda",
-    src: legendofzelda,
-    alt: "The Legend of Zelda",
+    image: {
+      src: legendofzelda,
+      alt: "The Legend of Zelda",
+    },
+    category: ["All Games", "Action", "Adventure"],
+    releaseDate: "May 1985",
+    developer: "Nintendo",
+    numOfPlayers: 2,
   },
   {
     title: "Mega Man",
-    src: megaman,
-    alt: "Mega Man",
+    image: {
+      src: megaman,
+      alt: "Mega Man",
+    },
+    category: ["All Games", "Sports", "Strategy"],
+    releaseDate: "June 1985",
+    developer: "Nintendo",
+    numOfPlayers: 3,
   },
 ];
 
@@ -175,4 +217,15 @@ export const footer = {
   ],
 
   descriptionDetail: "Developed by: jellybean",
+};
+
+/*----------------------------- overlay --------------------------*/
+
+export const overlayContent = {
+  buttonText: "Play Game",
+  closeIcon: {
+    src: closeicon,
+    alt: "closeicon",
+  },
+  gameInfo: ["NES release date", "Developer", "Number of players"],
 };

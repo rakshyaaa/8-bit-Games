@@ -19,7 +19,6 @@ export default function ImageCarousel({
     };
   }, []);
 
-  console.log({ title, subTitle });
   return (
     <div className="carousel">
       {images.map((image, index) => {
