@@ -1,20 +1,13 @@
-// import rating from "./images/star.png";
 import TestimonialCard from "./TestimonialCard";
 import { useState, useEffect } from "react";
 
-// const ratingImage = {
-//   src: rating,
-//   alt: "rating",
-// };
-
-export default function Testimonial({ testimonial }) {
+export default function Testimonial({ title, testimonials }) {
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
 
   useEffect(() => {
     let timer = setInterval(() => {
       setSelectedTestimonial(
-        (selectedTestimonial) =>
-          (selectedTestimonial + 1) % testimonial.testimonials.length
+        (selectedTestimonial) => (selectedTestimonial + 1) % testimonials.length
       );
     }, 3000);
 
@@ -24,12 +17,16 @@ export default function Testimonial({ testimonial }) {
   }, []);
   return (
     <div className="testimonials">
-      <h1>{testimonial.title}</h1>
+      <h1>{title}</h1>
       <div className="testimonialCarousel">
-        {testimonial.testimonials.map((testimonial, index) => {
+        {testimonials.map((testimonial, index) => {
           return (
             <TestimonialCard
-              testimonial={testimonial}
+              image={testimonial.image}
+              name={testimonial.name}
+              rating={testimonial.rating}
+              description={testimonial.description}
+              subDescription={testimonial.subDescription}
               index={index}
               selectedTestimonial={selectedTestimonial}
             />
@@ -37,7 +34,7 @@ export default function Testimonial({ testimonial }) {
         })}
       </div>
       <div className="testimonialCarouselDots">
-        {testimonial.testimonials.map((testimonial, index) => {
+        {testimonials.map((testimonial, index) => {
           return (
             <span
               className="testimonialCarouselDot"

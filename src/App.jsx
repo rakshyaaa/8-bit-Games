@@ -27,18 +27,25 @@ function App() {
       <ImageCarousel
         images={carouselImages}
         title={carouselText.title}
-        subtitle={carouselText.subTitle}
+        subTitle={carouselText.subTitle}
         delay={5000}
-        defaultValue={2}
+        defaultValue={0}
       />
       <Game
         gameSectionText={gameSectionText}
         gameCategories={gameCategories}
         games={games}
       />
-      <About about={about} />
-      <Testimonial testimonial={testimonial} />
-      <Footer footer={footer} />
+      <About
+        title={about.title}
+        description={about.description}
+        image={about.image}
+      />
+      <Testimonial
+        title={testimonial.title}
+        testimonials={testimonial.testimonials}
+      />
+      <Footer items={footer.items} description={footer.description} />
     </div>
   );
 }
