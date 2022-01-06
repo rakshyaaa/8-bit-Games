@@ -6,7 +6,11 @@ const ratingImage = {
 };
 
 export default function TestimonialCard({
-  testimonial,
+  image,
+  name,
+  rating,
+  description,
+  subDescription,
   selectedTestimonial,
   index,
 }) {
@@ -18,15 +22,15 @@ export default function TestimonialCard({
       }}
     >
       <div className="testimonialCardInside">
-        <img className="testimonialCardImage" {...testimonial.image} />
-        <p className="reviewer">{testimonial.name}</p>
-        <p className="review">{testimonial.description}</p>
-        <div class="rating">
-          {[...Array(testimonial.rating)].map((e, i) => {
+        <img className="testimonialCardImage" {...image} />
+        <p className="reviewer">{name}</p>
+        <p className="review">{description}</p>
+        <div className="rating">
+          {[...Array(rating)].map((e, i) => {
             return <img className="ratingImage" {...ratingImage} />;
           })}
         </div>
-        <p className="subreview">{testimonial.subDescription}</p>
+        <p className="subreview">{subDescription}</p>
       </div>
     </div>
   );

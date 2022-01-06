@@ -108,7 +108,7 @@ export const about = {
   title: "About 8-bit Games",
   description:
     "8-Bit games provides free retro games on-site for everyone to play. Bringing back nostalgic memories of NES classic games online.",
-  marioImage: {
+  image: {
     src: mario,
     alt: "Mario Image",
   },
@@ -158,7 +158,7 @@ export const testimonial = {
 /* ------------------------ Footer ---------------------------*/
 
 export const footer = {
-  socials: [
+  items: [
     {
       alt: "facebook",
       src: facebook,
@@ -174,5 +174,5 @@ export const footer = {
     },
   ],
 
-  developer: "Rakshya",
+  description: "Developed by: jellybean",
 };
