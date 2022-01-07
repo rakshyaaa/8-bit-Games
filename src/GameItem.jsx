@@ -1,31 +1,26 @@
 import { useState } from "react";
 import Overlay from "./Overlay";
 
-export default function GameItem({ game, category }) {
+export default function GameItem({ item, hoverText = "Play" }) {
   const [overlay, setOverlay] = useState(false);
   return (
-    <div
-      className="gameItem"
-      style={{
-        display: game.category.includes(category) ? "block" : "none",
-      }}
-    >
+    <div className="gameItem">
       <img
         className="gameItemImage"
-        {...game.image}
+        {...item.image}
         onClick={() => setOverlay(true)}
       />
-      <p className="playText">Play</p>
-      <p>{game.title}</p>
+      <p className="playText">{hoverText}</p>
+      <p>{item.title}</p>
       <Overlay
         overlay={overlay}
         setOverlay={setOverlay}
-        title={game.title}
-        image={game.image}
-        category={game.category}
-        releaseDate={game.releaseDate}
-        developer={game.developer}
-        numOfplayers={game.numOfplayers}
+        title={item.title}
+        image={item.image}
+        // category={item.category}
+        releaseDate={item.releaseDate}
+        developer={item.developer}
+        numOfPlayers={item.numOfPlayers}
       />
     </div>
   );

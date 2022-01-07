@@ -4,7 +4,6 @@ export default function Overlay({
   setOverlay,
   title,
   image,
-  category,
   releaseDate,
   developer,
   numOfPlayers,
@@ -22,19 +21,44 @@ export default function Overlay({
         <div className="gamePopUpContent">
           <div className="gamePopUpTitle">
             <h1 className="gamePopUpName">{title}</h1>
-            <p className="gamePopUpType">
+            {/* <p className="gamePopUpType">
               {category.map((category) => {
                 return <div>{category}</div>;
               })}
-            </p>
+            </p> */}
           </div>
 
-          <div className="gamePopUpInformation">
-            <div className="gameInformationAttribute">
-              <p className="gameInformationAttributeKey"></p>
-              <p className="gameInformationAttributeValue"></p>
+          {releaseDate ? (
+            <div className="gamePopUpInformation">
+              <div className="gameInformationAttribute">
+                <p className="gameInformationAttributeKey">
+                  NES Release Date:{" "}
+                </p>
+                <p className="gameInformationAttributeValue">{releaseDate}</p>
+              </div>
             </div>
-          </div>
+          ) : null}
+
+          {developer ? (
+            <div className="gamePopUpInformation">
+              <div className="gameInformationAttribute">
+                <p className="gameInformationAttributeKey">Developer: </p>
+                <p className="gameInformationAttributeValue">{developer}</p>
+              </div>
+            </div>
+          ) : null}
+
+          {numOfPlayers ? (
+            <div className="gamePopUpInformation">
+              <div className="gameInformationAttribute">
+                <p className="gameInformationAttributeKey">
+                  Number of Players:{" "}
+                </p>
+                <p className="gameInformationAttributeValue">{numOfPlayers}</p>
+              </div>
+            </div>
+          ) : null}
+
           <div className="playGame">
             <a className="playGameButton">{overlayContent.buttonText}</a>
           </div>

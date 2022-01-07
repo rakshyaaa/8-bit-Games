@@ -13,11 +13,10 @@ import {
   carouselImages,
   carouselText,
   gameSectionText,
-  gameCategories,
-  games,
   about,
   testimonial,
   footer,
+  games,
 } from "./Data";
 
 function App() {
@@ -31,11 +30,7 @@ function App() {
         delay={5000}
         defaultValue={0}
       />
-      <Game
-        gameSectionText={gameSectionText}
-        gameCategories={gameCategories}
-        games={games}
-      />
+      <Game text={gameSectionText} collections={games} />
       <About
         title={about.title}
         description={about.description}
